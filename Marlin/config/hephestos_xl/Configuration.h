@@ -60,7 +60,7 @@
 // #define PS_DEFAULT_OFF
 
 // Define this to have hotbed support
-//#define HEATED_BED_SUPPORT
+#define HEATED_BED_SUPPORT
 
 //===========================================================================
 //============================= Thermal Settings ============================
@@ -416,12 +416,12 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 
       #define ABL_MANUAL_PT_1_X X_MIN_POS + 30 + X_PROBE_OFFSET_FROM_EXTRUDER
       #define ABL_MANUAL_PT_1_Y Y_MIN_POS + 30 + Y_PROBE_OFFSET_FROM_EXTRUDER
-      #define ABL_MANUAL_PT_2_X X_MAX_POS - 30 + X_PROBE_OFFSET_FROM_EXTRUDER 
+      #define ABL_MANUAL_PT_2_X X_MAX_POS - 30 + X_PROBE_OFFSET_FROM_EXTRUDER
       #define ABL_MANUAL_PT_2_Y Y_MIN_POS + 30 + Y_PROBE_OFFSET_FROM_EXTRUDER
       #define ABL_MANUAL_PT_3_X X_MAX_POS - 30 + X_PROBE_OFFSET_FROM_EXTRUDER
       #define ABL_MANUAL_PT_3_Y Y_MAX_POS - 30 + Y_PROBE_OFFSET_FROM_EXTRUDER
       #define ABL_MANUAL_PT_4_X X_MIN_POS + 30 + X_PROBE_OFFSET_FROM_EXTRUDER
-      #define ABL_MANUAL_PT_4_Y Y_MAX_POS - 30 + Y_PROBE_OFFSET_FROM_EXTRUDER  
+      #define ABL_MANUAL_PT_4_Y Y_MAX_POS - 30 + Y_PROBE_OFFSET_FROM_EXTRUDER
 
   #endif // AUTO_BED_LEVELING_GRID
 
@@ -466,7 +466,7 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
 #define HOMING_FEEDRATE {2000, 2000, 150, 0} // set the homing speeds (mm/min)
-#define HOMING_SLOW_FEEDRATE {2000, 2000, 150, 0} 
+#define HOMING_SLOW_FEEDRATE {2000, 2000, 150, 0}
 
 // default settings
 
@@ -516,7 +516,7 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 
 #ifdef HEATED_BED_SUPPORT
   #define TEMP_SENSOR_BED 1
-  #define HBP_PREHEAT_TEMP 50 
+  #define HBP_PREHEAT_TEMP 50
 #endif
 
 //===========================================================================
@@ -582,7 +582,7 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 #define ULTIPANEL  //the UltiPanel as on Thingiverse
 //#define LCD_FEEDBACK_FREQUENCY_HZ 1000  // this is the tone frequency the buzzer plays when on UI feedback. ie Screen Click
 //#define LCD_FEEDBACK_FREQUENCY_DURATION_MS 100 // the duration the buzzer plays the UI feedback sound. ie Screen Click
-                                               // 0 to disable buzzer feedback  
+                                               // 0 to disable buzzer feedback
 
 // PanelOne from T3P3 (via RAMPS 1.4 AUX2/AUX3)
 // http://reprap.org/wiki/PanelOne
@@ -644,13 +644,13 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
  #define ULTRA_LCD  //general LCD support, also 16x2
  #define DOGLCD  // Support for SPI LCD 128x64 (Controller ST7565R graphic Display Family)
  #define ULTIMAKERCONTROLLER //as available from the Ultimaker online store.
- 
+
   #ifdef miniVIKI
    #define DEFAULT_LCD_CONTRAST 95
   #else
    #define DEFAULT_LCD_CONTRAST 40
   #endif
-  
+
  #define ENCODER_PULSES_PER_STEP 4
  #define ENCODER_STEPS_PER_MENU_ITEM 1
 #endif
@@ -844,9 +844,9 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
  * Support for a filament diameter sensor
  * Also allows adjustment of diameter at print time (vs  at slicing)
  * Single extruder only at this point (extruder 0)
- * 
+ *
  * Motherboards
- * 34 - RAMPS1.4 - uses Analog input 5 on the AUX2 connector 
+ * 34 - RAMPS1.4 - uses Analog input 5 on the AUX2 connector
  * 81 - Printrboard - Uses Analog input 2 on the Exp1 connector (version B,C,D,E)
  * 301 - Rambo  - uses Analog input 3
  * Note may require analog pins to be defined for different motherboards
@@ -863,7 +863,7 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 #define MAX_MEASUREMENT_DELAY       20  //delay buffer size in bytes (1 byte = 1cm)- limits maximum measurement delay allowable (must be larger than MEASUREMENT_DELAY_CM  and lower number saves RAM)
 
 //defines used in the code
-#define DEFAULT_MEASURED_FILAMENT_DIA  DEFAULT_NOMINAL_FILAMENT_DIA  //set measured to nominal initially 
+#define DEFAULT_MEASURED_FILAMENT_DIA  DEFAULT_NOMINAL_FILAMENT_DIA  //set measured to nominal initially
 
 //When using an LCD, uncomment the line below to display the Filament sensor data on the last line instead of status.  Status will appear for 5 sec.
 //#define FILAMENT_LCD_DISPLAY
